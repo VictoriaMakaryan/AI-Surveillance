@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 
 int max(int arr[], int size);
 int min(int arr[], int size);
@@ -10,8 +11,13 @@ int main() {
     std::cout << "Max: " << max(arr, size) << std::endl;
     std::cout << "Min: " << min(arr, size) << std::endl;
     std::cout << "Average: " << avrg(arr, size) << std::endl;
-}
 
+    char str[15] = "Hello";
+    char str2[10] = "World";
+    strcat(str, str2);
+    std::cout << str << std::endl;
+}
+ 
 int max(int arr[], int size) {
     int max_el = arr[0];
     for (int i = 1; i < size; ++i) {
@@ -39,3 +45,4 @@ float avrg(int arr[], int size) {
     }
     return sum / size; 
 }
+
